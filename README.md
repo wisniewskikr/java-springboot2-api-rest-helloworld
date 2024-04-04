@@ -8,6 +8,7 @@ USAGE JAVA
 Usage steps:
 1. In a command line tool start application with `mvn spring-boot:run`
 1. In a browser visit `http://localhost:8080`
+   * Expected JSON **{"message":"Hello World!"}**
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
