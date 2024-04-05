@@ -5,5 +5,4 @@ RUN mvn -f /home/app/pom.xml clean package -Dmaven.test.skip
 
 FROM eclipse-temurin:11-jre
 COPY --from=builder /home/app/target/*.jar  /opt/app/*.jar
-EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/opt/app/*.jar"]
