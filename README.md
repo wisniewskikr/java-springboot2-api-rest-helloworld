@@ -12,6 +12,28 @@ Usage steps:
 1. Clean up environment 
      * In a command line tool stop application with `ctrl + C`
 
+USAGE DOCKER
+--------------
+
+> Please be aware that following tools should be installed in advance on your computer: **Docker**. Docker tool has to be **up and running**. 
+
+> Please **clone/download** project, open **project's main folder** in your favorite **command line tool** and then **proceed with steps below**. 
+
+Usage steps:
+1. In a command line tool build Docker image with `docker build -t java-springboot2-api-rest-helloworld-image .`
+1. (Optional) In a command line tool check list of all images with `docker images`
+   * Expected **list of all docker images** downloaded on a computer
+1. In a command line tool start Docker container with `docker run -d -p 8080:8080 --name java-springboot2-api-rest-helloworld-container java-springboot2-api-rest-helloworld-image`
+1. (Optional) In a command line tool check list of all containers with `docker ps -a`
+   * Expected **list of all docker containers** installed on a computer
+1. In a http browser (e.g. Chrome) visit `http://localhost:8080`
+   * Expected JSON **{"message": "Hello World!"}**
+1. (Optional) In a command line tool check application logs with `docker logs java-springboot2-api-rest-helloworld-container`
+   * Expected **application logs**
+1. Clean up environment 
+     * In a command line tool stop and remove Docker container with `docker rm -f java-springboot2-api-rest-helloworld-container`
+     * In a command line tool stop and remove Docker image with `docker rmi java-springboot2-api-rest-helloworld-image`
+
 
 DESCRIPTION
 -----------
